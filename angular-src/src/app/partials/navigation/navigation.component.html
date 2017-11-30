@@ -1,0 +1,10 @@
+<form #loginForm="ngForm" (submit)="login(loginForm)" novalidate *ngIf="!apiService.loggedIn()">
+
+	<input [(ngModel)]="username" id="name" name="username" #username1="ngModel" type="text" required/><br>
+	<span *ngIf="loginForm.form.submitted && !username1.valid">Invalid name</span><br><br>
+
+	<input [(ngModel)]="password" name="password" type="password" required/><br>
+	<span *ngIf="loginForm.form.submitted && !password.valid">Invalid password</span><br><br>
+
+	<button type="submit" >Login</button>
+</form>

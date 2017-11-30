@@ -6,6 +6,7 @@
 
 # dependencies
 /node_modules
+/angular-src/node_modules
 
 # IDEs and editors
 /.idea
